@@ -16,7 +16,7 @@ defmodule PhoenixPractice.Router do
   scope "/", PhoenixPractice do
     pipe_through :browser # Use the default browser stack
 
-    resources "users", UsersController
+    resources "users", UserController
     get "/", PageController, :index
   end
 

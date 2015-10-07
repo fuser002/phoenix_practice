@@ -1,0 +1,7 @@
+<h1>Hello World!</h1>
+<%= for user <- @users do %>
+  <h1><%= user.name %></h1>
+  <h3><%= link "Show", to: user_path(@conn, :show, user) %></h3>
+  <h3><%= link "Edit", to: user_path(@conn, :edit, user) %></h3>
+<% end %>
+<%= link "new user", to: user_path(@conn, :new) %>

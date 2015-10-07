@@ -1,0 +1,13 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <ul>
+      <%= for {attr, message} <- f.errors do %>
+        <li><%= humanize(attr) %><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= label f, :name, "Name" %>
+  <%= text_input f, :name %>
+  <%= submit "Sumit" %>
+<% end %>
