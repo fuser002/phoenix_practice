@@ -19,9 +19,6 @@ defmodule PhoenixPractice.Mixfile do
   def application do
     [mod: {PhoenixPractice, []},
      applications: app_list(Mix.env)]
-    # [mod: {PhoenixPractice, []},
-     # applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    # :phoenix_ecto, :postgrex]]
   end
 
   def app_list do
