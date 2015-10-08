@@ -1,3 +1,29 @@
+# Hound Integration Test
+
+## Setup for Mac
+## Step 1/2 Install selenium-server-standalone via Homebrew
+```sh
+$ brew install selenium-server-standalone
+```
+
+## ( if you installed firefox via Homebrew ) Step 2/2 Add Firefox Binary Path to PATH
+```sh
+$ echo 'export PATH=/opt/homebrew-cask/Caskroom/firefox/latest/Firefox.app/Contents/MacOS:$PATH' >> .zshrc
+$ exec $SHELL -l
+```
+
+## Execute
+## Step 1/2 Start Selenium Server in another window
+```sh
+$ selenium-server
+```
+
+## Step 2/2 Mix Test
+```sh
+$ cd phoenix_practice
+$ mix test
+```
+
 # PhoenixPractice
 
 To start your Phoenix app:
