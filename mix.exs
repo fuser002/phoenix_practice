@@ -9,6 +9,7 @@ defmodule PhoenixPractice.Mixfile do
      compilers: [:phoenix] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     preferred_cli_env: [espec: :test],
      deps: deps]
   end
 
@@ -34,6 +35,7 @@ defmodule PhoenixPractice.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:espec_phoenix, "~> 0.1.7", only: :test, app: false},
      {:cowboy, "~> 1.0"}]
   end
 end
